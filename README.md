@@ -1,8 +1,5 @@
 # Tech Pulse INPT — Full-Stack · IA · Docker
 
-**Idée, coaching technique et supervision :** Mr. Yann BENMAISSA  
-**Conception et développement :** Hibat Allah EL AMRANI, Khadija OUMHEND & Khadija OUANOUR
-
 > *« Quel est le **X** le plus populaire dans le domaine **Y**, dans le pays **Z** ? »*
 
 Plateforme d'intelligence open-source multi-sources : un **score composite transparent**
@@ -184,12 +181,4 @@ cd frontend && npx tsc -b        # typecheck frontend
 | **`backend/docker-compose.yml` supprimé** | Une seule source de vérité d'orchestration (racine) ; évite la divergence. |
 | **AI service** : Holt damped trend (NumPy pur) | Modèle de prévision réel (paramètres appris par série), léger (~50 Mo d'image), explicable — adapté à une démonstration PFE. |
 
----
 
-## 🔐 Sécurité
-
-helmet · CORS restreint · rate-limit 200 req/min · validation **zod** de tous les
-params/query · JWT (`Authorization: Bearer`) sur la surface `projects` ·
-chiffrement AES-256-GCM des tokens GitHub · conteneur IA non-root ·
-secrets exclusivement via variables d'environnement (valeurs de dev fournies,
-à régénérer en production : `openssl rand -hex 32`).
